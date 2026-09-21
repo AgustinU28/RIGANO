@@ -17,6 +17,9 @@ export default {
           "rojo-osc": "#B71A12",
           amarillo: "#FFD500",
           negro: "#0A0A0A",
+          papel: "#F7F5F0",
+          cyan: "#00AEEF",
+          magenta: "#EC008C",
         },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -27,6 +30,11 @@ export default {
       fontFamily: {
         sans: ["Inter", "system-ui", "sans-serif"],
         display: ["'Archivo'", "Inter", "sans-serif"],
+      },
+      boxShadow: {
+        "hard-sm": "4px 4px 0 0 #0A0A0A",
+        hard: "8px 8px 0 0 #0A0A0A",
+        "hard-rojo": "6px 6px 0 0 #E2231A",
       },
       keyframes: {
         "accordion-down": {

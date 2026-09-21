@@ -10,10 +10,10 @@ export function Hero() {
   return (
     <section
       id="inicio"
-      className="relative flex min-h-screen items-center bg-white"
+      className="relative flex min-h-screen items-center overflow-hidden bg-white"
     >
-      {/* Acento sutil: sol amarillo del logo, muy tenue */}
-      <div className="pointer-events-none absolute right-0 top-0 h-[40rem] w-[40rem] translate-x-1/4 -translate-y-1/4 rounded-full bg-marca-amarillo/10 blur-3xl" />
+      {/* Trama de semitono, acento sutil propio de la imprenta */}
+      <div className="trama-oscura pointer-events-none absolute right-0 top-0 h-[28rem] w-[28rem] opacity-40 [mask-image:radial-gradient(circle,black,transparent_70%)]" />
 
       <div className="container relative z-10 py-32">
         <div className="max-w-4xl">

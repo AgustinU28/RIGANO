@@ -14,6 +14,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
+import { SectionHeading } from "@/components/SectionHeading";
 import { supabase, supabaseConfigurado } from "@/lib/supabase";
 import { SITE, SERVICIOS, whatsappLink } from "@/data/site";
 
@@ -74,17 +75,11 @@ export function Contacto() {
   return (
     <section id="contacto" className="bg-white py-24">
       <div className="container">
-        <div className="max-w-2xl">
-          <p className="text-sm font-bold uppercase tracking-widest text-marca-rojo">
-            Hablemos
-          </p>
-          <h2 className="mt-2 titulo-display text-4xl text-marca-negro sm:text-5xl">
-            Pedí tu presupuesto
-          </h2>
-          <p className="mt-4 text-lg text-marca-negro/70">
-            Contanos qué necesitás y te pasamos un presupuesto sin compromiso.
-          </p>
-        </div>
+        <SectionHeading
+          eyebrow="Hablemos"
+          title="Pedí tu presupuesto"
+          lead="Contanos qué necesitás y te pasamos un presupuesto sin compromiso."
+        />
 
         <div className="mt-12 grid gap-10 lg:grid-cols-[1fr_1.2fr]">
           {/* Datos de contacto */}
@@ -93,7 +88,7 @@ export function Contacto() {
               href={whatsappLink()}
               target="_blank"
               rel="noreferrer"
-              className="flex items-center gap-4 rounded-xl border-2 border-marca-rojo bg-marca-rojo p-5 text-white transition-transform hover:-translate-y-0.5"
+              className="flex items-center gap-4 border-2 border-marca-rojo bg-marca-rojo p-5 text-white shadow-hard-sm transition-transform hover:-translate-x-1 hover:-translate-y-1 hover:shadow-hard-rojo"
             >
               <MessageCircle className="h-7 w-7 shrink-0" />
               <div>
@@ -106,7 +101,7 @@ export function Contacto() {
 
             <a
               href={`tel:${SITE.telLink}`}
-              className="flex items-center gap-4 rounded-xl border border-border bg-neutral-50 p-5 transition-colors hover:border-marca-rojo"
+              className="flex items-center gap-4 border border-border bg-marca-papel p-5 transition-colors hover:border-marca-rojo"
             >
               <Phone className="h-6 w-6 shrink-0 text-marca-rojo" />
               <div>
@@ -117,7 +112,7 @@ export function Contacto() {
               </div>
             </a>
 
-            <div className="flex items-center gap-4 rounded-xl border border-border bg-neutral-50 p-5">
+            <div className="flex items-center gap-4 border border-border bg-marca-papel p-5">
               <MapPin className="h-6 w-6 shrink-0 text-marca-rojo" />
               <div>
                 <p className="text-sm font-semibold uppercase tracking-wide text-marca-negro/60">
@@ -127,7 +122,7 @@ export function Contacto() {
               </div>
             </div>
 
-            <div className="flex items-center gap-4 rounded-xl border border-border bg-neutral-50 p-5">
+            <div className="flex items-center gap-4 border border-border bg-marca-papel p-5">
               <Clock className="h-6 w-6 shrink-0 text-marca-rojo" />
               <div>
                 <p className="text-sm font-semibold uppercase tracking-wide text-marca-negro/60">
@@ -139,7 +134,7 @@ export function Contacto() {
 
             <a
               href={`mailto:${SITE.email}`}
-              className="flex items-center gap-4 rounded-xl border border-border bg-neutral-50 p-5 transition-colors hover:border-marca-rojo"
+              className="flex items-center gap-4 border border-border bg-marca-papel p-5 transition-colors hover:border-marca-rojo"
             >
               <Mail className="h-6 w-6 shrink-0 text-marca-rojo" />
               <div>
@@ -154,7 +149,7 @@ export function Contacto() {
           {/* Formulario */}
           <form
             onSubmit={onSubmit}
-            className="rounded-2xl border-2 border-marca-negro bg-neutral-50 p-6 sm:p-8"
+            className="border-2 border-marca-negro bg-marca-papel p-6 shadow-hard sm:p-8"
           >
             <div className="grid gap-5 sm:grid-cols-2">
               <div className="space-y-2">
@@ -187,7 +182,7 @@ export function Contacto() {
                 required
                 value={form.servicio}
                 onChange={actualizar("servicio")}
-                className="flex h-11 w-full rounded-md border-2 border-input bg-white px-3 text-base text-marca-negro focus-visible:border-marca-rojo focus-visible:outline-none"
+                className="flex h-11 w-full rounded-none border-2 border-input bg-white px-3 text-base text-marca-negro focus-visible:border-marca-rojo focus-visible:outline-none"
               >
                 <option value="" disabled>
                   Elegí un servicio…
@@ -233,7 +228,7 @@ export function Contacto() {
         </div>
 
         {/* Mapa */}
-        <div className="mt-12 overflow-hidden rounded-2xl border border-border">
+        <div className="mt-12 overflow-hidden border border-border">
           <iframe
             title="Mapa - Rígano, Don Bosco 184, Bahía Blanca"
             src="https://www.google.com/maps?q=Don+Bosco+184,+Bah%C3%ADa+Blanca&output=embed"
