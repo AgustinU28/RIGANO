@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 4%;
+    --border: 0 0% 90%;
+    --input: 0 0% 88%;
+    --ring: 4 87% 49%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+}
+
+@layer components {
+  .titulo-display {
+    @apply font-display font-black uppercase tracking-tight;
+  }
+
+  /* Trama de semitono para placeholders de producto.
+     .trama-clara = puntos blancos (sobre fondo oscuro)
+     .trama-oscura = puntos negros (sobre fondo claro/amarillo) */
+  .trama-clara {
+    background-image: radial-gradient(
+      rgba(255, 255, 255, 0.22) 1.5px,
+      transparent 1.6px
+    );
+    background-size: 14px 14px;
+  }
+
+  .trama-oscura {
+    background-image: radial-gradient(
+      rgba(10, 10, 10, 0.18) 1.5px,
+      transparent 1.6px
+    );
+    background-size: 14px 14px;
+  }
+}
