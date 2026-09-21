@@ -2,6 +2,7 @@ import { Toaster } from "sonner";
 
 import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
+import { RegistrationDivider } from "@/components/RegistrationDivider";
 import { Banda } from "@/components/Banda";
 import { Servicios } from "@/components/Servicios";
 import { CtaPresupuesto } from "@/components/CtaPresupuesto";
@@ -17,9 +18,11 @@ export default function App() {
       <Navbar />
       <main>
         <Hero />
+        <RegistrationDivider />
         <Banda />
         <Servicios />
         <CtaPresupuesto />
+        <RegistrationDivider label="TRABAJOS · IMPRENTA DE PRECISIÓN" />
         <Trabajos />
         <Nosotros />
         <Contacto />

@@ -1,5 +1,6 @@
 import { ImageIcon } from "lucide-react";
 
+import { Tag } from "@/components/ui/tag";
 import { SITE } from "@/data/site";
 
 export function Nosotros() {
@@ -7,13 +8,13 @@ export function Nosotros() {
     <section id="nosotros" className="bg-white py-24">
       <div className="container grid items-center gap-12 lg:grid-cols-2">
         {/* Foto del local (placeholder) */}
-        <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-border bg-neutral-100">
+        <div className="relative aspect-[4/3] overflow-hidden border border-border bg-neutral-100 shadow-hard-sm">
           <div className="absolute inset-0 flex flex-col items-center justify-center gap-2 text-neutral-400">
             <ImageIcon className="h-14 w-14" />
             <span className="text-sm font-semibold">Foto del local</span>
           </div>
-          <span className="absolute bottom-4 left-4 rounded bg-marca-rojo px-3 py-1 text-xs font-bold uppercase tracking-wide text-white">
-            {SITE.direccion}
+          <span className="absolute bottom-4 left-4">
+            <Tag tone="rojo">{SITE.direccion}</Tag>
           </span>
         </div>
 

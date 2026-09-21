@@ -35,7 +35,7 @@ export function Footer() {
                 target="_blank"
                 rel="noreferrer"
                 aria-label="Instagram"
-                className="flex h-11 w-11 items-center justify-center rounded-lg bg-white/10 transition-colors hover:bg-marca-rojo"
+                className="flex h-11 w-11 items-center justify-center bg-white/10 transition-colors hover:bg-marca-rojo"
               >
                 <Instagram className="h-5 w-5" />
               </a>

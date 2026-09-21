@@ -7,8 +7,8 @@ export function CtaPresupuesto() {
   return (
     <section className="bg-white py-12">
       <div className="container">
-        <div className="relative overflow-hidden rounded-3xl bg-marca-negro px-8 py-14 text-white sm:px-14">
-          <div className="pointer-events-none absolute -right-10 -top-10 h-48 w-48 rounded-full bg-marca-rojo/30 blur-3xl" />
+        <div className="relative overflow-hidden border-2 border-marca-negro bg-marca-negro px-8 py-14 text-white shadow-hard-rojo sm:px-14">
+          <div className="trama-clara pointer-events-none absolute -right-6 -top-10 h-56 w-56 opacity-30" />
           <div className="relative flex flex-col items-start justify-between gap-8 lg:flex-row lg:items-center">
             <div className="max-w-xl">
               <h2 className="titulo-display text-3xl sm:text-4xl">
